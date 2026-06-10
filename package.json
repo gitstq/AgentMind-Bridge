@@ -1,0 +1,58 @@
+{
+  "name": "agentmind-bridge",
+  "version": "1.0.0",
+  "description": "Lightweight, local-first shared memory bridge for AI coding agents",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "agentmind": "dist/cli/index.js",
+    "amb": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write src/**/*.ts",
+    "prepare": "npm run build",
+    "start": "node dist/cli/index.js"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "memory",
+    "shared-memory",
+    "claude",
+    "codex",
+    "cursor",
+    "cli",
+    "local-first",
+    "privacy"
+  ],
+  "author": "AgentMind Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/agentmind-bridge.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "better-sqlite3": "^11.0.0",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.10",
+    "@types/node": "^20.12.0",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  }
+}
